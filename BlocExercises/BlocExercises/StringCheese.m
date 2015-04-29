@@ -11,6 +11,7 @@
 @implementation StringCheese
 
 - (NSString *) favoriteCheeseStringWithCheese:(NSString *)cheeseName {
+    
     return [NSString stringWithFormat:@"My favorite cheese is %@.", cheeseName];
 }
 
@@ -26,18 +27,8 @@
 }
 
 - (NSString *) numberOfCheesesStringWithCheeseCount:(NSUInteger)cheeseCount {
-
-    if (cheeseCount == 1) {
-       
-        NSString *cheeseString = (cheeseCount == 1 ? @"cheese" : @"cheeses");
-        return [NSString stringWithFormat:@"%lu %@", (unsigned long)cheeseCount, cheeseString];
-
-    }
-        /* WORK HERE, ASSUMING THERE IS 1 CHEESE */
-
-    else {
-        }
-        /* WORK HERE, ASSUMING THERE ARE 2+ CHEESES */
+    NSString *cheeseString = (cheeseCount == 1 ? @"cheese" : @"cheeses");
+    return [NSString stringWithFormat:@"%ld %@", cheeseCount, cheeseString];
 }
 
 @end
