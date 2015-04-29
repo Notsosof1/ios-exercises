@@ -28,7 +28,7 @@
     self.worf = @"Worf, son of Mogh, slayer of Gowron";
     self.picard = @"Captain Jean-Luc Picard of the USS Enterprise";
     self.crusher = @"Beverly Crusher, Chief Medical Officer";
-
+    
     self.starTrekArrays = [[StarTrekArrays alloc] init];
 }
 
@@ -43,7 +43,7 @@
     NSArray *expectedArray = @[self.worf, self.picard, self.crusher];
     NSArray *actualArray = [self.starTrekArrays arrayOfStarTrekCharactersFromString:testString];
     XCTAssertEqualObjects(expectedArray, actualArray, @"The returned array was different than expected.");
-
+    
     testString = [NSString stringWithFormat:@"%@;%@;%@", self.picard, self.crusher, self.worf];
     expectedArray = @[self.picard, self.crusher, self.worf];
     actualArray = [self.starTrekArrays arrayOfStarTrekCharactersFromString:testString];
@@ -55,7 +55,7 @@
     NSString *expectedString = [NSString stringWithFormat:@"%@;%@;%@", self.worf, self.picard, self.crusher];
     NSString *actualString = [self.starTrekArrays stringOfStarTrekCharactersFromArray:testArray];
     XCTAssertEqualObjects(expectedString, actualString, @"The returned string was different than expected.");
-
+    
     testArray = @[self.picard, self.crusher, self.worf];
     expectedString = [NSString stringWithFormat:@"%@;%@;%@", self.picard, self.crusher, self.worf];
     actualString = [self.starTrekArrays stringOfStarTrekCharactersFromArray:testArray];
@@ -67,7 +67,7 @@
     NSArray *expectedArray = @[self.crusher, self.picard, self.worf];
     NSArray *actualArray = [self.starTrekArrays alphabeticallySortedStarTrekCharactersFromArray:inputArray];
     XCTAssertEqualObjects(expectedArray, actualArray, @"Alphabetization didn't work correctly.");
-
+    
     inputArray = @[self.picard, self.crusher];
     expectedArray = @[self.crusher, self.picard];
     actualArray = [self.starTrekArrays alphabeticallySortedStarTrekCharactersFromArray:inputArray];
