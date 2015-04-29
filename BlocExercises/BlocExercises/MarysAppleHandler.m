@@ -12,8 +12,8 @@
 
 - (NSString *) itemMaryCanPurchaseForDollars:(NSInteger)dollars {
     NSString *purchaseableItem;
-        
-        if (dollars == 100000000) {
+    
+        if (dollars == 1000000000) {
             purchaseableItem = @"have The Big Apple";
         } else if (dollars == 1000) {
             purchaseableItem = @"have an Apple computer";
@@ -22,15 +22,14 @@
         } else if (dollars == 5) {
             purchaseableItem = @"have some gum";
         } else if (dollars == 4) {
-            purchaseableItem = @"et out of my store";
+            purchaseableItem = @"get out of my store";
         }
-        
-        NSLog(@"For $%ld, Mary can: %@", (long)dollars, purchaseableItem);
+    
+        NSLog(@"For $%ld, Mary can %@", (long)dollars, purchaseableItem);
         return purchaseableItem;
     }
     
     /* WORK HERE */
-    
 
 
 - (NSUInteger) dollarCostForAppleFlavoredVodka {
@@ -41,8 +40,5 @@
     return returnedItem;
     
     }
-    
-
-}
 
 @end
